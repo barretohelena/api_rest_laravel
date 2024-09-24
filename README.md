@@ -28,5 +28,5 @@ Na sequência execute o comando `php artisan migrate` para a criação das tabel
 E por fim execute o comando `php artisan db:seed` para inserir alguns registros de testes nas tabelas.
 
 ## Documentação
-A documentação sobre a utilização dos endpoints estão aqui [documentação api_rest_laravel](http://localhost:8000/api/documentation)
+A documentação sobre a utilização dos endpoints estão aqui [documentação api_rest_laravel](http://localhost:8000/api/documentation), lembre de autorizar no swagger após obter o token. 
 
