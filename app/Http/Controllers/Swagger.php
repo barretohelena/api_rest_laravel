@@ -14,6 +14,16 @@ use OpenApi\Annotations as OA;
  *         email="your-email@example.com"
  *     )
  * )
+ * 
+ * @OA\SecurityScheme(
+ *     type="http",
+ *     description="Use o Bearer token para autenticação",
+ *     name="Authorization",
+ *     in="header",
+ *     scheme="bearer",
+ *     bearerFormat="JWT",
+ *     securityScheme="bearerAuth",
+ * )
  */
 class Swagger
 {

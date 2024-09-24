@@ -11,22 +11,26 @@ class AuthController extends Controller
 {
     /**
      * @OA\Post(
-     *     path="/login",
+     *     path="/api/login",
      *     summary="Realiza login do usuário e retorna um token JWT",
      *     tags={"Authentication"},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
      *             required={"email","password"},
-     *             @OA\Property(property="email", type="string", format="email", example="usuario@example.com"),
-     *             @OA\Property(property="password", type="string", format="password", example="password123")
+     *             @OA\Property(property="email", type="string", format="email", example="helena@gmail.com"),
+     *             @OA\Property(property="password", type="string", format="password", example="123456")
      *         ),
      *     ),
      *     @OA\Response(
      *         response=200,
      *         description="Login bem-sucedido, retorna token JWT",
      *         @OA\JsonContent(
-     *             @OA\Property(property="token", type="string", example="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...")
+     *             @OA\Property(property="data", type="object", 
+     *               @OA\Property(property="token", type="string", example="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."),
+     *               @OA\Property(property="token_type", type="string", example="bearer"),
+     *               @OA\Property(property="expires_in", type="integer", example=3600)
+     *             )
      *         )
      *     ),
      *     @OA\Response(

@@ -19,12 +19,11 @@ use OpenApi\Annotations as OA;
 
 /**
  * @OA\Info(
- *     title="API Documentation",
+ *     title="API Rest Laravel",
  *     version="1.0.0",
- *     description="This is the API documentation for the product management application.",
  *     @OA\Contact(
- *         name="Your Name",
- *         email="your-email@example.com"
+ *         name="Helena",
+ *         email="barreto.helena692@gmail.com"
  *     )
  * )
  */
