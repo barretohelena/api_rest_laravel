@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+        args:
+          user: helena
+          uid: 1000
+        context: ./
+        dockerfile: Dockerfile
+    image: php:8.1-apache
+    container_name: php_8
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - '8000:80'
+    depends_on:
+      - db
+    networks:
+      - api-laravel-network
+
+  db:
+    image: mysql:8
+    container_name: mysql_8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 8Wr0El1??I6
+      MYSQL_DATABASE: api
+      MYSQL_USER: helena
+      MYSQL_PASSWORD: (@nI>A!687q+
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./docker-compose/db_data:/var/lib/mysql
+    networks:
+      - api-laravel-network
+
+networks:
+  api-laravel-network:
+    driver: bridge
