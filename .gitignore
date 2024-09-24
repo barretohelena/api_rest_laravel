@@ -19,4 +19,4 @@ yarn-error.log
 /.vscode
 
 # docker
-.docker-compose/db_data
+/docker-compose/db_data
